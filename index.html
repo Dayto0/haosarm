@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#333333">
+    <link rel="manifest" href="manifest.json">
+    <title>Home Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .button {
+            width: 100%;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .button img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .button:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .button span {
+            font-size: 20px;
+            font-weight: 600;
+            color: #555;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title">My Server</div>
+    <div class="button-container">
+        <a href="https://haos.haosarm.com" class="button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/2048px-Home_Assistant_Logo.svg.png" alt="Home Assistant Logo">
+            <span>Home Assistant</span>
+        </a>
+
+        <a href="https://prmx.haosarm.com" class="button">
+            <img src="https://camo.githubusercontent.com/4e9e0bf3fcd09d6557b4eaa8f790ec17599ed6e8eb37a7e78adaa30650c8a6e3/68747470733a2f2f7777772e70726f786d6f782e636f6d2f696d616765732f70726f786d6f782f50726f786d6f785f73796d626f6c5f7374616e646172645f6865782e706e67" alt="Proxmox Logo">
+            <span>ProxMox</span>
+        </a>
+
+        <a href="https://cloud.haosarm.com" class="button">
+            <img src="https://marstel.ru/assets/images/iaas_img/nextcloud/nextcloud_logo.png" alt="Nextcloud Logo">
+            <span>NextCloud</span>
+        </a>
+
+        <a href="https://frgt.haosarm.com" class="button">
+            <img src="https://docs.frigate.video/img/logo.svg" alt="Frigate Logo">
+            <span>Frigate</span>
+        </a>
+
+        <a href="https://g2rtc.haosarm.com" class="button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7IE5kzg4PkSf4qpfVaB9XYjOBukfdBru1qQ&s" alt="go2rtc Logo">
+            <span>Go2rtc</span>
+        </a>
+
+        <a href="https://ad.haosarm.com" class="button">
+            <img src="https://avatars3.githubusercontent.com/u/8361145?s=200&v=4" alt="AdGuard Logo">
+            <span>AdGuard</span>
+        </a>
+
+        <a href="https://ngx.haosarm.com" class="button">
+            <img src="https://www.svgrepo.com/show/373924/nginx.svg" alt="Nginx Logo">
+            <span>Nginx</span>
+        </a>
+
+        <a href="https://prt.haosarm.com" class="button">
+            <img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_200,h_200/https://api.charmhub.io/api/v1/media/download/charm_Owpj9CsDEMZwVtup3ZTxxs0FtyvDqb2o_icon_5cef79c2d18f67464f39c8f2cf2d7ebb815b0071f04d3ffbb94f49fddd3ab666.png" alt="Portainer Logo">
+            <span>Portainer</span>
+        </a>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then(() => {
+                console.log('Service Worker Registered');
+            });
+        }
+    </script>
+</body>
+
+</html>
